@@ -29,7 +29,7 @@ function EmployeeDetail({ match, location, history }) {
         `https://onboard-backend-crinitis.herokuapp.com/api/employee/getemployee/${id}`,
         config
       );
-      console.log(data);
+      // console.log(data);
       setLoading(false);
       setEmployee(data.employee);
     }

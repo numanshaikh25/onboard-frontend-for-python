@@ -22,10 +22,9 @@ function Notifications() {
         `https://onboard-backend-crinitis.herokuapp.com/api/employee/getnotifications/`,
         config
       );
-      console.log(data);
+
       setLoading(false);
       setNotifications(data.notifications);
-      console.log(notifications);
     }
     fetchNotifications();
   }, []);
@@ -42,7 +41,7 @@ function Notifications() {
         `https://onboard-backend-crinitis.herokuapp.com/api/employee/readnotifications/${id}/`,
         config
       );
-      console.log(data);
+
       setLoading(false);
       setTimeout(() => {
         setNotifications(data.notifications);

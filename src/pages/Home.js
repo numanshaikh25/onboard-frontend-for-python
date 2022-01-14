@@ -24,10 +24,10 @@ function Home() {
         `https://onboard-backend-crinitis.herokuapp.com/api/employee/getnotifications/`,
         config
       );
-      console.log(data);
+      // console.log(data);
       setLoading(false);
       setNotifications(data.notifications);
-      console.log(notifications);
+      // console.log(notifications);
     }
     if (userInfo && userInfo.isAdmin) {
       fetchNotifications();

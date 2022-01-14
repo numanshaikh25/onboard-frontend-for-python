@@ -30,7 +30,7 @@ function EmployeeTable() {
         "https://onboard-backend-crinitis.herokuapp.com/api/employee/getemployees/",
         config
       );
-      console.log(data);
+
       setLoading(false);
       setEmployees(data.employees);
     }
@@ -52,13 +52,11 @@ function EmployeeTable() {
         )
         .then((res) => {
           setLoading(false);
-          console.log(res);
+
           setSuccess(res.data.success);
-          console.log(success);
         })
         .catch((err) => {
           setLoading(false);
-          console.log(err);
         });
     }
   };

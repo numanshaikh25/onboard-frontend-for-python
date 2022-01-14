@@ -125,9 +125,9 @@ function AddEmployeeForm({ setSuccess, success }) {
       })
       .catch((err) => {
         setLoading(false);
-        console.log(err.response.data.error);
+        // console.log(err.response.data.error);
         setErrormessage(err.response.data.error);
-        console.log(errormessage);
+        // console.log(errormessage);
       });
     setTimeout(() => {
       setErrormessage("");

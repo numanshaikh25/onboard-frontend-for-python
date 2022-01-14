@@ -157,9 +157,9 @@ function UpdateEmployeeForm() {
       })
       .catch((err) => {
         setLoading(false);
-        console.log(err.response.data.error);
+        // console.log(err.response.data.error);
         setErrormessage(err.response.data.error);
-        console.log(errormessage);
+        // console.log(errormessage);
       });
     setTimeout(() => {
       setErrormessage("");
@@ -203,9 +203,9 @@ function UpdateEmployeeForm() {
       })
       .catch((err) => {
         setLoadingdocuments(false);
-        console.log(err.response.data.error);
+        // console.log(err.response.data.error);
         setErrormessagedocuments(err.response.data.error);
-        console.log(errormessagedocuments);
+        // console.log(errormessagedocuments);
       });
     setTimeout(() => {
       setErrormessagedocuments("");
