@@ -75,7 +75,7 @@ function Invite() {
         {success && <SuccessAlert message={success} />}
         {errormessage && <ErrorAlert message={errormessage} />}
         <div className="mb-3 row">
-          <label for="firstName" className="col-sm-2 col-form-label">
+          <label htmlFor="firstName" className="col-sm-2 col-form-label">
             Enter Email
           </label>
           <div className="col-sm-8">

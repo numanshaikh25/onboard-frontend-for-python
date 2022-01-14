@@ -34,7 +34,7 @@ function Login() {
         {error && <ErrorAlert message={error} />}
         <form onSubmit={submitHandler}>
           <div className="mb-3">
-            <label for="exampleFormControlInput1" className="form-label">
+            <label htmlFor="exampleFormControlInput1" className="form-label">
               Email address
             </label>
             <input
@@ -47,7 +47,7 @@ function Login() {
             />
           </div>
           <div className="mb-3">
-            <label for="inputPassword" className="form-label">
+            <label htmlFor="inputPassword" className="form-label">
               Password
             </label>
             <input

@@ -53,7 +53,7 @@ function EmployeeDetail({ match, location, history }) {
           Personal Details
         </h2>
         <div className="mb-3 row">
-          <label for="firstName" className="col-sm-2 col-form-label">
+          <label htmlFor="firstName" className="col-sm-2 col-form-label">
             First Name
           </label>
           <div className="col-sm-10">
@@ -67,7 +67,7 @@ function EmployeeDetail({ match, location, history }) {
           </div>
         </div>
         <div className="mb-3 row">
-          <label for="lastName" className="col-sm-2 col-form-label">
+          <label htmlFor="lastName" className="col-sm-2 col-form-label">
             Last Name
           </label>
           <div className="col-sm-10">
@@ -81,7 +81,7 @@ function EmployeeDetail({ match, location, history }) {
           </div>
         </div>
         <div className="mb-3 row">
-          <label for="Email" className="col-sm-2 col-form-label">
+          <label htmlFor="Email" className="col-sm-2 col-form-label">
             Email
           </label>
           <div className="col-sm-10">
@@ -95,7 +95,7 @@ function EmployeeDetail({ match, location, history }) {
           </div>
         </div>
         <div className="mb-3 row">
-          <label for="gender" className="col-sm-2 col-form-label">
+          <label htmlFor="gender" className="col-sm-2 col-form-label">
             Gender
           </label>
           <div className="col-sm-10">
@@ -109,7 +109,7 @@ function EmployeeDetail({ match, location, history }) {
           </div>
         </div>
         <div className="mb-3 row">
-          <label for="Age" className="col-sm-2 col-form-label">
+          <label htmlFor="Age" className="col-sm-2 col-form-label">
             Age
           </label>
           <div className="col-sm-10">
@@ -123,7 +123,7 @@ function EmployeeDetail({ match, location, history }) {
           </div>
         </div>
         <div className="mb-3 row">
-          <label for="MobileNumber" className="col-sm-2 col-form-label">
+          <label htmlFor="MobileNumber" className="col-sm-2 col-form-label">
             Mobile Number
           </label>
           <div className="col-sm-10">
@@ -137,7 +137,7 @@ function EmployeeDetail({ match, location, history }) {
           </div>
         </div>
         <div className="mb-3 row">
-          <label for="Address" className="col-sm-2 col-form-label">
+          <label htmlFor="Address" className="col-sm-2 col-form-label">
             Address
           </label>
           <div className="col-sm-10">
@@ -153,7 +153,7 @@ function EmployeeDetail({ match, location, history }) {
           Role of Employee
         </h2>
         <div className="mb-3 row">
-          <label for="Role" className="col-sm-2 col-form-label">
+          <label htmlFor="Role" className="col-sm-2 col-form-label">
             Role
           </label>
           <div className="col-sm-10">
@@ -170,7 +170,7 @@ function EmployeeDetail({ match, location, history }) {
           Bank Details
         </h2>
         <div className="mb-3 row">
-          <label for="BankName" className="col-sm-2 col-form-label">
+          <label htmlFor="BankName" className="col-sm-2 col-form-label">
             Bank Name
           </label>
           <div className="col-sm-10">
@@ -184,7 +184,7 @@ function EmployeeDetail({ match, location, history }) {
           </div>
         </div>
         <div className="mb-3 row">
-          <label for="AccountNumber" className="col-sm-2 col-form-label">
+          <label htmlFor="AccountNumber" className="col-sm-2 col-form-label">
             Account Number
           </label>
           <div className="col-sm-10">
@@ -198,7 +198,7 @@ function EmployeeDetail({ match, location, history }) {
           </div>
         </div>
         <div className="mb-3 row">
-          <label for="IfscCode" className="col-sm-2 col-form-label">
+          <label htmlFor="IfscCode" className="col-sm-2 col-form-label">
             Ifsc Code
           </label>
           <div className="col-sm-10">
@@ -212,7 +212,7 @@ function EmployeeDetail({ match, location, history }) {
           </div>
         </div>
         <div className="mb-3 row">
-          <label for="BranchName" className="col-sm-2 col-form-label">
+          <label htmlFor="BranchName" className="col-sm-2 col-form-label">
             Branch Name
           </label>
           <div className="col-sm-10">

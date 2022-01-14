@@ -154,7 +154,7 @@ function AddEmployeeForm({ setSuccess, success }) {
             Personal Details
           </h2>
           <div className="mb-3 row">
-            <label for="firstName" className="col-sm-2 col-form-label">
+            <label htmlFor="firstName" className="col-sm-2 col-form-label">
               First Name
             </label>
             <div className="col-sm-10">
@@ -168,7 +168,7 @@ function AddEmployeeForm({ setSuccess, success }) {
             </div>
           </div>
           <div className="mb-3 row">
-            <label for="lastName" className="col-sm-2 col-form-label">
+            <label htmlFor="lastName" className="col-sm-2 col-form-label">
               Last Name
             </label>
             <div className="col-sm-10">
@@ -182,7 +182,7 @@ function AddEmployeeForm({ setSuccess, success }) {
             </div>
           </div>
           <div className="mb-3 row">
-            <label for="Email" className="col-sm-2 col-form-label">
+            <label htmlFor="Email" className="col-sm-2 col-form-label">
               Email
             </label>
             <div className="col-sm-10">
@@ -196,7 +196,7 @@ function AddEmployeeForm({ setSuccess, success }) {
             </div>
           </div>
           <div className="mb-3 row">
-            <label for="gender" className="col-sm-2 col-form-label">
+            <label htmlFor="gender" className="col-sm-2 col-form-label">
               Gender
             </label>
             <div className="col-sm-10">
@@ -213,7 +213,7 @@ function AddEmployeeForm({ setSuccess, success }) {
             </div>
           </div>
           <div className="mb-3 row">
-            <label for="Age" className="col-sm-2 col-form-label">
+            <label htmlFor="Age" className="col-sm-2 col-form-label">
               Age
             </label>
             <div className="col-sm-10">
@@ -227,7 +227,7 @@ function AddEmployeeForm({ setSuccess, success }) {
             </div>
           </div>
           <div className="mb-3 row">
-            <label for="MobileNumber" className="col-sm-2 col-form-label">
+            <label htmlFor="MobileNumber" className="col-sm-2 col-form-label">
               Mobile Number
             </label>
             <div className="col-sm-10">
@@ -241,7 +241,7 @@ function AddEmployeeForm({ setSuccess, success }) {
             </div>
           </div>
           <div className="mb-3 row">
-            <label for="Address" className="col-sm-2 col-form-label">
+            <label htmlFor="Address" className="col-sm-2 col-form-label">
               Address
             </label>
             <div className="col-sm-10">
@@ -257,7 +257,7 @@ function AddEmployeeForm({ setSuccess, success }) {
             Role of Employee
           </h2>
           <div className="mb-3 row">
-            <label for="Role" className="col-sm-2 col-form-label">
+            <label htmlFor="Role" className="col-sm-2 col-form-label">
               Role
             </label>
             <div className="col-sm-10">
@@ -274,7 +274,7 @@ function AddEmployeeForm({ setSuccess, success }) {
             Bank Details
           </h2>
           <div className="mb-3 row">
-            <label for="BankName" className="col-sm-2 col-form-label">
+            <label htmlFor="BankName" className="col-sm-2 col-form-label">
               Bank Name
             </label>
             <div className="col-sm-10">
@@ -288,7 +288,7 @@ function AddEmployeeForm({ setSuccess, success }) {
             </div>
           </div>
           <div className="mb-3 row">
-            <label for="AccountNumber" className="col-sm-2 col-form-label">
+            <label htmlFor="AccountNumber" className="col-sm-2 col-form-label">
               Account Number
             </label>
             <div className="col-sm-10">
@@ -302,7 +302,7 @@ function AddEmployeeForm({ setSuccess, success }) {
             </div>
           </div>
           <div className="mb-3 row">
-            <label for="IfscCode" className="col-sm-2 col-form-label">
+            <label htmlFor="IfscCode" className="col-sm-2 col-form-label">
               Ifsc Code
             </label>
             <div className="col-sm-10">
@@ -316,7 +316,7 @@ function AddEmployeeForm({ setSuccess, success }) {
             </div>
           </div>
           <div className="mb-3 row">
-            <label for="BranchName" className="col-sm-2 col-form-label">
+            <label htmlFor="BranchName" className="col-sm-2 col-form-label">
               Branch Name
             </label>
             <div className="col-sm-10">
@@ -333,7 +333,7 @@ function AddEmployeeForm({ setSuccess, success }) {
             Upload Documents
           </h2>
           <div className="mb-3 row">
-            <label for="AadharCard" className="col-sm-2 col-form-label">
+            <label htmlFor="AadharCard" className="col-sm-2 col-form-label">
               Aadhar Card
             </label>
             <div className="col-sm-10">
@@ -344,7 +344,7 @@ function AddEmployeeForm({ setSuccess, success }) {
                 onChange={aadharUpload}
               ></input>
               <label
-                for="pdfFiles"
+                htmlFor="pdfFiles"
                 className="form-label"
                 style={{ color: "red" }}
               >
@@ -353,7 +353,7 @@ function AddEmployeeForm({ setSuccess, success }) {
             </div>
           </div>
           <div className="mb-3 row">
-            <label for="PanCard" className="col-sm-2 col-form-label">
+            <label htmlFor="PanCard" className="col-sm-2 col-form-label">
               Pan Card
             </label>
             <div className="col-sm-10">
@@ -364,7 +364,7 @@ function AddEmployeeForm({ setSuccess, success }) {
                 onChange={panUpload}
               ></input>
               <label
-                for="pdfFiles"
+                htmlFor="pdfFiles"
                 className="form-label"
                 style={{ color: "red" }}
               >
@@ -373,7 +373,7 @@ function AddEmployeeForm({ setSuccess, success }) {
             </div>
           </div>
           <div className="mb-3 row">
-            <label for="Passport" className="col-sm-2 col-form-label">
+            <label htmlFor="Passport" className="col-sm-2 col-form-label">
               Passport
             </label>
             <div className="col-sm-10">
@@ -384,7 +384,7 @@ function AddEmployeeForm({ setSuccess, success }) {
                 onChange={passportUpload}
               ></input>
               <label
-                for="pdfFiles"
+                htmlFor="pdfFiles"
                 className="form-label"
                 style={{ color: "red" }}
               >
@@ -393,7 +393,7 @@ function AddEmployeeForm({ setSuccess, success }) {
             </div>
           </div>
           <div className="mb-3 row">
-            <label for="DrivingLicense" className="col-sm-2 col-form-label">
+            <label htmlFor="DrivingLicense" className="col-sm-2 col-form-label">
               Driving License (Optional)
             </label>
             <div className="col-sm-10">
@@ -404,7 +404,7 @@ function AddEmployeeForm({ setSuccess, success }) {
                 onChange={licenseUpload}
               ></input>
               <label
-                for="pdfFiles"
+                htmlFor="pdfFiles"
                 className="form-label"
                 style={{ color: "red" }}
               >
