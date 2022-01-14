@@ -53,8 +53,8 @@ function AddEmployeeForm({ setSuccess, success }) {
   const submitHandler = (e) => {
     e.preventDefault();
     setLoading(true);
+    const formData = new FormData();
     setTimeout(() => {
-      const formData = new FormData();
       if (first_name) {
         formData.append("first_name", first_name);
       }
