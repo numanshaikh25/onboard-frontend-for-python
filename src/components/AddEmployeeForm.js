@@ -120,6 +120,8 @@ function AddEmployeeForm({ setSuccess, success }) {
         // history.push("/allemployees");
         setSuccess(res.data.success);
         setLoading(false);
+        userInfo.is_registered = true;
+        localStorage.setItem("userInfo", JSON.stringify(userInfo));
       })
       .catch((err) => {
         setLoading(false);

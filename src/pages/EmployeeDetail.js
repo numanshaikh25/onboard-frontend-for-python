@@ -36,8 +36,9 @@ function EmployeeDetail({ match, location, history }) {
     fetchEmployee();
 
     if (!userInfo) {
+      history.push("/login");
     }
-  }, []);
+  }, [userInfo]);
   const goBack = () => {
     history.goBack();
   };

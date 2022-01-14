@@ -35,7 +35,7 @@ function Home() {
     if (userInfo && userInfo.is_registered == false) {
       history.push("/addemployee");
     }
-  }, [userInfo]);
+  }, [history, userInfo]);
   return (
     <div className="container">
       {userInfo && userInfo.isAdmin && notifications != "" && (
