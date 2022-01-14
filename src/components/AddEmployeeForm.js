@@ -103,34 +103,35 @@ function AddEmployeeForm({ setSuccess, success }) {
       if (driving_license) {
         formData.append("driving_license", driving_license);
       }
-    }, 200);
-    console.log(formData);
-    const config = {
-      headers: {
-        "Content-Type": "multipart/form-data",
-        Authorization: `Bearer ${userInfo.token}`,
-      },
-    };
 
-    axios
-      .post(
-        "https://onboard-backend-crinitis.herokuapp.com/api/employee/adddetails/",
-        formData,
-        config
-      )
-      .then((res) => {
-        // history.push("/allemployees");
-        setSuccess(res.data.success);
-        setLoading(false);
-        userInfo.is_registered = true;
-        localStorage.setItem("userInfo", JSON.stringify(userInfo));
-      })
-      .catch((err) => {
-        setLoading(false);
-        // console.log(err.response.data.error);
-        setErrormessage(err.response.data.error);
-        // console.log(errormessage);
-      });
+      console.log(formData);
+      const config = {
+        headers: {
+          "Content-Type": "multipart/form-data",
+          Authorization: `Bearer ${userInfo.token}`,
+        },
+      };
+
+      axios
+        .post(
+          "https://onboard-backend-crinitis.herokuapp.com/api/employee/adddetails/",
+          formData,
+          config
+        )
+        .then((res) => {
+          // history.push("/allemployees");
+          setSuccess(res.data.success);
+          setLoading(false);
+          userInfo.is_registered = true;
+          localStorage.setItem("userInfo", JSON.stringify(userInfo));
+        })
+        .catch((err) => {
+          setLoading(false);
+          // console.log(err.response.data.error);
+          setErrormessage(err.response.data.error);
+          // console.log(errormessage);
+        });
+    }, 200);
     setTimeout(() => {
       setErrormessage("");
     }, 5000);
@@ -138,6 +139,7 @@ function AddEmployeeForm({ setSuccess, success }) {
       setSuccess("");
     }, 15000);
   };
+
   const goBack = () => {
     history.goBack();
   };
