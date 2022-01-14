@@ -21,10 +21,10 @@ function AllEmployees() {
   return (
     <div className="container">
       <div className="row">
-        <div className="col-10">
+        <div className="col-8">
           <h1 className="my-5">All Employees</h1>
         </div>
-        <div className="col-2 justify-content-end">
+        <div className="col-3 mt-2 justify-content-end">
           <Link
             className="ms-auto my-5 btn btn-primary text-right"
             to="/addemployee"

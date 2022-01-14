@@ -40,6 +40,44 @@ function Navbar() {
                   Home
                 </Link>
               </li>
+              {userInfo ? (
+                <li className="nav-item active dropdown">
+                  <a
+                    className="nav-link active dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    {userInfo.name}
+                  </a>
+                  <ul
+                    className="dropdown-menu"
+                    aria-labelledby="navbarDropdown"
+                  >
+                    <li>
+                      <Link
+                        onClick={logoutHandler}
+                        className="dropdown-item"
+                        aria-current="page"
+                      >
+                        Logout
+                      </Link>
+                    </li>
+                  </ul>
+                </li>
+              ) : (
+                <li>
+                  <Link
+                    to="/login"
+                    className="nav-link active"
+                    aria-current="page"
+                  >
+                    Login
+                  </Link>
+                </li>
+              )}
               {userInfo && (
                 <li className="nav-item">
                   <Link
@@ -79,44 +117,6 @@ function Navbar() {
                     aria-current="page"
                   >
                     Notifications
-                  </Link>
-                </li>
-              )}
-              {userInfo ? (
-                <li className="nav-item active dropdown">
-                  <a
-                    className="nav-link active dropdown-toggle"
-                    href="#"
-                    id="navbarDropdown"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    {userInfo.name}
-                  </a>
-                  <ul
-                    className="dropdown-menu"
-                    aria-labelledby="navbarDropdown"
-                  >
-                    <li>
-                      <Link
-                        onClick={logoutHandler}
-                        className="dropdown-item"
-                        aria-current="page"
-                      >
-                        Logout
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
-              ) : (
-                <li>
-                  <Link
-                    to="/login"
-                    className="nav-link active"
-                    aria-current="page"
-                  >
-                    Login
                   </Link>
                 </li>
               )}

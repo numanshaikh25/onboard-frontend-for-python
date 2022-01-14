@@ -71,65 +71,67 @@ function EmployeeTable() {
       </button>
       <div className="text-center mx-auto">{loading && <Loading />}</div>
       {success && <SuccessAlert message={success} />}
-      <table className="table">
-        <thead>
-          <tr>
-            <th scope="col">Id</th>
-            <th scope="col">First Name</th>
-            <th scope="col">Last Name</th>
-            <th scope="col">Email</th>
-            <th scope="col">Role</th>
-            <th scope="col">Action</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          {employees.map((employee) => (
-            <tr key={employee.id}>
-              <th scope="row">{employee.id}</th>
-              <td>
-                <Link
-                  to={`/employeedetail/${employee.id}`}
-                  style={{ textDecoration: "none", color: "black" }}
-                >
-                  {employee.first_name}
-                </Link>
-              </td>
-              <td>
-                <Link
-                  to={`/employeedetail/${employee.id}`}
-                  style={{ textDecoration: "none", color: "black" }}
-                >
-                  {employee.last_name}
-                </Link>
-              </td>
-              <td>
-                <Link
-                  to={`/employeedetail/${employee.id}`}
-                  style={{ textDecoration: "none", color: "black" }}
-                >
-                  {employee.email}
-                </Link>
-              </td>
-              <td>{employee.role}</td>
-              <td>
-                <Link
-                  className="btn-sm btn-light"
-                  to={`/updateemployee/${employee.id}`}
-                >
-                  <i className="fas fa-edit"></i>
-                </Link>
-                <button
-                  className="btn-sm btn-danger"
-                  onClick={() => deleteHandler(employee.id)}
-                >
-                  <i className="fas fa-trash"></i>
-                </button>
-              </td>
+      <div className="table-responsive">
+        <table className="table">
+          <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">First Name</th>
+              <th scope="col">Last Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Role</th>
+              <th scope="col">Action</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+
+          <tbody>
+            {employees.map((employee) => (
+              <tr key={employee.id}>
+                <th scope="row">{employee.id}</th>
+                <td>
+                  <Link
+                    to={`/employeedetail/${employee.id}`}
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
+                    {employee.first_name}
+                  </Link>
+                </td>
+                <td>
+                  <Link
+                    to={`/employeedetail/${employee.id}`}
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
+                    {employee.last_name}
+                  </Link>
+                </td>
+                <td>
+                  <Link
+                    to={`/employeedetail/${employee.id}`}
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
+                    {employee.email}
+                  </Link>
+                </td>
+                <td>{employee.role}</td>
+                <td>
+                  <Link
+                    className="btn-sm btn-light"
+                    to={`/updateemployee/${employee.id}`}
+                  >
+                    <i className="fas fa-edit"></i>
+                  </Link>
+                  <button
+                    className="btn-sm btn-danger"
+                    onClick={() => deleteHandler(employee.id)}
+                  >
+                    <i className="fas fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
