@@ -19,7 +19,7 @@ function Notifications() {
     };
     async function fetchNotifications() {
       const { data } = await axios.get(
-        `http://127.0.0.1:8000/api/employee/getnotifications/`,
+        `https://onboard-backend-crinitis.herokuapp.com/api/employee/getnotifications/`,
         config
       );
 
@@ -38,7 +38,7 @@ function Notifications() {
     setLoading(true);
     async function readNotifications() {
       const { data } = await axios.get(
-        `http://127.0.0.1:8000/api/employee/readnotifications/${id}/`,
+        `https://onboard-backend-crinitis.herokuapp.com/api/employee/readnotifications/${id}/`,
         config
       );
 

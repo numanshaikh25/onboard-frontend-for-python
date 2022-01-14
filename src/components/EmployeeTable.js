@@ -27,7 +27,7 @@ function EmployeeTable() {
 
     async function fetchEmployees() {
       const { data } = await axios.get(
-        "http://127.0.0.1:8000/api/employee/getemployees/",
+        "https://onboard-backend-crinitis.herokuapp.com/api/employee/getemployees/",
         config
       );
 
@@ -47,7 +47,7 @@ function EmployeeTable() {
     if (window.confirm("Are you sure you want to delete this emloyee?")) {
       axios
         .delete(
-          `http://127.0.0.1:8000/api/employee/deleteemployee/${id}/`,
+          `https://onboard-backend-crinitis.herokuapp.com/api/employee/deleteemployee/${id}/`,
           config
         )
         .then((res) => {

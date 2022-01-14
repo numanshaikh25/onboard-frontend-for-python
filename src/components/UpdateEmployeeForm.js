@@ -50,7 +50,7 @@ function UpdateEmployeeForm() {
     };
     async function fetchEmployee() {
       const { data } = await axios.get(
-        `http://127.0.0.1:8000/api/employee/getemployee/${id}/`,
+        `https://onboard-backend-crinitis.herokuapp.com/api/employee/getemployee/${id}/`,
         config
       );
       console.log(data.employee);
@@ -146,7 +146,7 @@ function UpdateEmployeeForm() {
 
     axios
       .put(
-        `http://127.0.0.1:8000/api/employee/updateemployee/${id}/`,
+        `https://onboard-backend-crinitis.herokuapp.com/api/employee/updateemployee/${id}/`,
         formData,
         config
       )
@@ -192,7 +192,7 @@ function UpdateEmployeeForm() {
     };
     axios
       .put(
-        `http://127.0.0.1:8000/api/employee/updateemployeedocuments/${id}/`,
+        `https://onboard-backend-crinitis.herokuapp.com/api/employee/updateemployeedocuments/${id}/`,
         formData,
         config
       )

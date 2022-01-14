@@ -111,7 +111,11 @@ function AddEmployeeForm({ setSuccess, success }) {
     };
 
     axios
-      .post("http://127.0.0.1:8000/api/employee/adddetails/", formData, config)
+      .post(
+        "https://onboard-backend-crinitis.herokuapp.com/api/employee/adddetails/",
+        formData,
+        config
+      )
       .then((res) => {
         // history.push("/allemployees");
         setSuccess(res.data.success);

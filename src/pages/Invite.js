@@ -33,7 +33,11 @@ function Invite() {
     };
 
     axios
-      .post("http://127.0.0.1:8000/api/employee/invite/", formData, config)
+      .post(
+        "https://onboard-backend-crinitis.herokuapp.com/api/employee/invite/",
+        formData,
+        config
+      )
       .then((res) => {
         // history.push("/allemployees");
         setLoading(false);
