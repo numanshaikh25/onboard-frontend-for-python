@@ -32,11 +32,11 @@ function AddEmployeeForm({ setSuccess, success }) {
   const redirect = location.search ? location.search.split("=")[1] : "/";
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
-  // useEffect(() => {
-  //   if (!userInfo) {
-  //     history.push("/login");
-  //   }
-  // }, [userInfo, loading, error]);
+  useEffect(() => {
+    if (!userInfo) {
+      history.push("/login");
+    }
+  }, [userInfo, loading]);
 
   const aadharUpload = (e) => {
     setAadharcard(e.target.files[0]);
@@ -54,84 +54,81 @@ function AddEmployeeForm({ setSuccess, success }) {
     e.preventDefault();
     setLoading(true);
     const formData = new FormData();
-    setTimeout(() => {
-      if (first_name) {
-        formData.append("first_name", first_name);
-      }
-      if (last_name) {
-        formData.append("last_name", last_name);
-      }
-      if (email) {
-        formData.append("email", email);
-      }
-      if (gender) {
-        formData.append("gender", gender);
-      }
-      if (age) {
-        formData.append("age", age);
-      }
-      if (mobile_number) {
-        formData.append("mobile_number", mobile_number);
-      }
-      if (address) {
-        formData.append("address", address);
-      }
-      if (role) {
-        formData.append("role", role);
-      }
-      if (bank_name) {
-        formData.append("bank_name", bank_name);
-      }
-      if (account_no) {
-        formData.append("account_no", account_no);
-      }
-      if (ifsc_code) {
-        formData.append("ifsc_code", ifsc_code);
-      }
-      if (bank_branch_location) {
-        formData.append("bank_branch_location", bank_branch_location);
-      }
-      if (aadhar_card) {
-        formData.append("aadhar_card", aadhar_card);
-      }
-      if (pan_card) {
-        formData.append("pan_card", pan_card);
-      }
-      if (passport) {
-        formData.append("passport", passport);
-      }
-      if (driving_license) {
-        formData.append("driving_license", driving_license);
-      }
+    if (first_name) {
+      formData.append("first_name", first_name);
+    }
+    if (last_name) {
+      formData.append("last_name", last_name);
+    }
+    if (email) {
+      formData.append("email", email);
+    }
+    if (gender) {
+      formData.append("gender", gender);
+    }
+    if (age) {
+      formData.append("age", age);
+    }
+    if (mobile_number) {
+      formData.append("mobile_number", mobile_number);
+    }
+    if (address) {
+      formData.append("address", address);
+    }
+    if (role) {
+      formData.append("role", role);
+    }
+    if (bank_name) {
+      formData.append("bank_name", bank_name);
+    }
+    if (account_no) {
+      formData.append("account_no", account_no);
+    }
+    if (ifsc_code) {
+      formData.append("ifsc_code", ifsc_code);
+    }
+    if (bank_branch_location) {
+      formData.append("bank_branch_location", bank_branch_location);
+    }
+    if (aadhar_card) {
+      formData.append("aadhar_card", aadhar_card);
+    }
+    if (pan_card) {
+      formData.append("pan_card", pan_card);
+    }
+    if (passport) {
+      formData.append("passport", passport);
+    }
+    if (driving_license) {
+      formData.append("driving_license", driving_license);
+    }
+    console.log(formData);
+    const config = {
+      headers: {
+        "Content-Type": "multipart/form-data",
+        Authorization: `Bearer ${userInfo.token}`,
+      },
+    };
 
-      console.log(formData);
-      const config = {
-        headers: {
-          "Content-Type": "multipart/form-data",
-          Authorization: `Bearer ${userInfo.token}`,
-        },
-      };
-
-      axios
-        .post(
-          "https://onboard-backend-crinitis.herokuapp.com/api/employee/adddetails/",
-          formData,
-          config
-        )
-        .then((res) => {
-          // history.push("/allemployees");
-          setSuccess(res.data.success);
-          setLoading(false);
-          userInfo.is_registered = true;
-          localStorage.setItem("userInfo", JSON.stringify(userInfo));
-        })
-        .catch((err) => {
-          setLoading(false);
-          // console.log(err.response.data.error);
-          setErrormessage(err.response.data.error);
-          // console.log(errormessage);
-        });
-    }, 200);
+    axios
+      .post(
+        "https://onboard-backend-crinitis.herokuapp.com/api/employee/adddetails/",
+        formData,
+        config
+      )
+      .then((res) => {
+        // history.push("/allemployees");
+        setSuccess(res.data.success);
+        setLoading(false);
+        userInfo.is_registered = true;
+        localStorage.setItem("userInfo", JSON.stringify(userInfo));
+      })
+      .catch((err) => {
+        setLoading(false);
+        // console.log(err.response.data.error);
+        setErrormessage(err.response.data.error);
+        // console.log(errormessage);
+      });
     setTimeout(() => {
       setErrormessage("");
     }, 5000);
@@ -139,7 +136,6 @@ function AddEmployeeForm({ setSuccess, success }) {
       setSuccess("");
     }, 15000);
   };
-
   const goBack = () => {
     history.goBack();
   };

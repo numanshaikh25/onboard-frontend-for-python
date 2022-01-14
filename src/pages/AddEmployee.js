@@ -21,7 +21,9 @@ function AddEmployee() {
   return (
     <div className="container my-4">
       <h1 className="my-3 text-center">Add Details</h1>
-      {mounted && <AddEmployeeForm setSuccess={setSuccess} success={success} />}
+      {userInfo && (
+        <AddEmployeeForm setSuccess={setSuccess} success={success} />
+      )}
     </div>
   );
 }
