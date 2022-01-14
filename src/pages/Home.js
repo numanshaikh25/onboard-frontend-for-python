@@ -21,7 +21,7 @@ function Home() {
         },
       };
       const { data } = await axios.get(
-        `https://onboard-backend-crinitis.herokuapp.com/api/employee/getnotifications/`,
+        `http://127.0.0.1:8000/api/employee/getnotifications/`,
         config
       );
       // console.log(data);

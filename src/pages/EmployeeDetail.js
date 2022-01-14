@@ -26,7 +26,7 @@ function EmployeeDetail({ match, location, history }) {
     };
     async function fetchEmployee() {
       const { data } = await axios.get(
-        `https://onboard-backend-crinitis.herokuapp.com/api/employee/getemployee/${id}`,
+        `http://127.0.0.1:8000/api/employee/getemployee/${id}`,
         config
       );
       // console.log(data);

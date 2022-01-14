@@ -102,7 +102,7 @@ function AddEmployeeForm({ setSuccess, success }) {
     if (driving_license) {
       formData.append("driving_license", driving_license);
     }
-
+    console.log(formData);
     const config = {
       headers: {
         "Content-Type": "multipart/form-data",
@@ -111,11 +111,7 @@ function AddEmployeeForm({ setSuccess, success }) {
     };
 
     axios
-      .post(
-        "https://onboard-backend-crinitis.herokuapp.com/api/employee/adddetails/",
-        formData,
-        config
-      )
+      .post("http://127.0.0.1:8000/api/employee/adddetails/", formData, config)
       .then((res) => {
         // history.push("/allemployees");
         setSuccess(res.data.success);
