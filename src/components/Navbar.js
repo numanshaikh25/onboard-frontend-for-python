@@ -19,9 +19,9 @@ function Navbar() {
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-3">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to="/">
             Onboard
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
