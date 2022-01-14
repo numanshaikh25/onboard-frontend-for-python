@@ -53,55 +53,57 @@ function AddEmployeeForm({ setSuccess, success }) {
   const submitHandler = (e) => {
     e.preventDefault();
     setLoading(true);
-    const formData = new FormData();
-    if (first_name) {
-      formData.append("first_name", first_name);
-    }
-    if (last_name) {
-      formData.append("last_name", last_name);
-    }
-    if (email) {
-      formData.append("email", email);
-    }
-    if (gender) {
-      formData.append("gender", gender);
-    }
-    if (age) {
-      formData.append("age", age);
-    }
-    if (mobile_number) {
-      formData.append("mobile_number", mobile_number);
-    }
-    if (address) {
-      formData.append("address", address);
-    }
-    if (role) {
-      formData.append("role", role);
-    }
-    if (bank_name) {
-      formData.append("bank_name", bank_name);
-    }
-    if (account_no) {
-      formData.append("account_no", account_no);
-    }
-    if (ifsc_code) {
-      formData.append("ifsc_code", ifsc_code);
-    }
-    if (bank_branch_location) {
-      formData.append("bank_branch_location", bank_branch_location);
-    }
-    if (aadhar_card) {
-      formData.append("aadhar_card", aadhar_card);
-    }
-    if (pan_card) {
-      formData.append("pan_card", pan_card);
-    }
-    if (passport) {
-      formData.append("passport", passport);
-    }
-    if (driving_license) {
-      formData.append("driving_license", driving_license);
-    }
+    setTimeout(() => {
+      const formData = new FormData();
+      if (first_name) {
+        formData.append("first_name", first_name);
+      }
+      if (last_name) {
+        formData.append("last_name", last_name);
+      }
+      if (email) {
+        formData.append("email", email);
+      }
+      if (gender) {
+        formData.append("gender", gender);
+      }
+      if (age) {
+        formData.append("age", age);
+      }
+      if (mobile_number) {
+        formData.append("mobile_number", mobile_number);
+      }
+      if (address) {
+        formData.append("address", address);
+      }
+      if (role) {
+        formData.append("role", role);
+      }
+      if (bank_name) {
+        formData.append("bank_name", bank_name);
+      }
+      if (account_no) {
+        formData.append("account_no", account_no);
+      }
+      if (ifsc_code) {
+        formData.append("ifsc_code", ifsc_code);
+      }
+      if (bank_branch_location) {
+        formData.append("bank_branch_location", bank_branch_location);
+      }
+      if (aadhar_card) {
+        formData.append("aadhar_card", aadhar_card);
+      }
+      if (pan_card) {
+        formData.append("pan_card", pan_card);
+      }
+      if (passport) {
+        formData.append("passport", passport);
+      }
+      if (driving_license) {
+        formData.append("driving_license", driving_license);
+      }
+    }, 200);
     console.log(formData);
     const config = {
       headers: {
