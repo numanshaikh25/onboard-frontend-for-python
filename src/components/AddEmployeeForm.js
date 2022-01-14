@@ -111,7 +111,11 @@ function AddEmployeeForm({ setSuccess, success }) {
     };
 
     axios
-      .post("http://127.0.0.1:8000/api/employee/adddetails/", formData, config)
+      .post(
+        "https://onboard-backend-crinitis.herokuapp.com/api/employee/adddetails/",
+        formData,
+        config
+      )
       .then((res) => {
         // history.push("/allemployees");
         setSuccess(res.data.success);
@@ -147,53 +151,53 @@ function AddEmployeeForm({ setSuccess, success }) {
           <h2 className="my-4" style={{ borderBottom: "2px solid black" }}>
             Personal Details
           </h2>
-          <div class="mb-3 row">
-            <label for="firstName" class="col-sm-2 col-form-label">
+          <div className="mb-3 row">
+            <label for="firstName" className="col-sm-2 col-form-label">
               First Name
             </label>
-            <div class="col-sm-10">
+            <div className="col-sm-10">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="firstName"
                 value={first_name}
                 onChange={(e) => setFirstname(e.target.value)}
               />
             </div>
           </div>
-          <div class="mb-3 row">
-            <label for="lastName" class="col-sm-2 col-form-label">
+          <div className="mb-3 row">
+            <label for="lastName" className="col-sm-2 col-form-label">
               Last Name
             </label>
-            <div class="col-sm-10">
+            <div className="col-sm-10">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="lastName"
                 value={last_name}
                 onChange={(e) => setLastname(e.target.value)}
               />
             </div>
           </div>
-          <div class="mb-3 row">
-            <label for="Email" class="col-sm-2 col-form-label">
+          <div className="mb-3 row">
+            <label for="Email" className="col-sm-2 col-form-label">
               Email
             </label>
-            <div class="col-sm-10">
+            <div className="col-sm-10">
               <input
                 type="email"
-                class="form-control"
+                className="form-control"
                 id="inputEmail"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
           </div>
-          <div class="mb-3 row">
-            <label for="gender" class="col-sm-2 col-form-label">
+          <div className="mb-3 row">
+            <label for="gender" className="col-sm-2 col-form-label">
               Gender
             </label>
-            <div class="col-sm-10">
+            <div className="col-sm-10">
               <select
                 className="form-select"
                 name="gender"
@@ -206,41 +210,41 @@ function AddEmployeeForm({ setSuccess, success }) {
               </select>
             </div>
           </div>
-          <div class="mb-3 row">
-            <label for="Age" class="col-sm-2 col-form-label">
+          <div className="mb-3 row">
+            <label for="Age" className="col-sm-2 col-form-label">
               Age
             </label>
-            <div class="col-sm-10">
+            <div className="col-sm-10">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="Age"
                 value={age}
                 onChange={(e) => setAge(e.target.value)}
               />
             </div>
           </div>
-          <div class="mb-3 row">
-            <label for="MobileNumber" class="col-sm-2 col-form-label">
+          <div className="mb-3 row">
+            <label for="MobileNumber" className="col-sm-2 col-form-label">
               Mobile Number
             </label>
-            <div class="col-sm-10">
+            <div className="col-sm-10">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="MobileNumber"
                 value={mobile_number}
                 onChange={(e) => setMobilenumber(e.target.value)}
               />
             </div>
           </div>
-          <div class="mb-3 row">
-            <label for="Address" class="col-sm-2 col-form-label">
+          <div className="mb-3 row">
+            <label for="Address" className="col-sm-2 col-form-label">
               Address
             </label>
-            <div class="col-sm-10">
+            <div className="col-sm-10">
               <textarea
-                class="form-control"
+                className="form-control"
                 id="Address"
                 value={address}
                 onChange={(e) => setAddress(e.target.value)}
@@ -250,14 +254,14 @@ function AddEmployeeForm({ setSuccess, success }) {
           <h2 className="my-4" style={{ borderBottom: "2px solid black" }}>
             Role of Employee
           </h2>
-          <div class="mb-3 row">
-            <label for="Role" class="col-sm-2 col-form-label">
+          <div className="mb-3 row">
+            <label for="Role" className="col-sm-2 col-form-label">
               Role
             </label>
-            <div class="col-sm-10">
+            <div className="col-sm-10">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="Role"
                 value={role}
                 onChange={(e) => setRole(e.target.value)}
@@ -267,56 +271,56 @@ function AddEmployeeForm({ setSuccess, success }) {
           <h2 className="my-4" style={{ borderBottom: "2px solid black" }}>
             Bank Details
           </h2>
-          <div class="mb-3 row">
-            <label for="BankName" class="col-sm-2 col-form-label">
+          <div className="mb-3 row">
+            <label for="BankName" className="col-sm-2 col-form-label">
               Bank Name
             </label>
-            <div class="col-sm-10">
+            <div className="col-sm-10">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="BankName"
                 value={bank_name}
                 onChange={(e) => setBankname(e.target.value)}
               />
             </div>
           </div>
-          <div class="mb-3 row">
-            <label for="AccountNumber" class="col-sm-2 col-form-label">
+          <div className="mb-3 row">
+            <label for="AccountNumber" className="col-sm-2 col-form-label">
               Account Number
             </label>
-            <div class="col-sm-10">
+            <div className="col-sm-10">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="AccountNumber"
                 value={account_no}
                 onChange={(e) => setAccountno(e.target.value)}
               />
             </div>
           </div>
-          <div class="mb-3 row">
-            <label for="IfscCode" class="col-sm-2 col-form-label">
+          <div className="mb-3 row">
+            <label for="IfscCode" className="col-sm-2 col-form-label">
               Ifsc Code
             </label>
-            <div class="col-sm-10">
+            <div className="col-sm-10">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="IfscCode"
                 value={ifsc_code}
                 onChange={(e) => setIfsccode(e.target.value)}
               />
             </div>
           </div>
-          <div class="mb-3 row">
-            <label for="BranchName" class="col-sm-2 col-form-label">
+          <div className="mb-3 row">
+            <label for="BranchName" className="col-sm-2 col-form-label">
               Branch Name
             </label>
-            <div class="col-sm-10">
+            <div className="col-sm-10">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="BranchName"
                 value={bank_branch_location}
                 onChange={(e) => setBankbranchlocation(e.target.value)}
@@ -326,66 +330,82 @@ function AddEmployeeForm({ setSuccess, success }) {
           <h2 className="my-4" style={{ borderBottom: "2px solid black" }}>
             Upload Documents
           </h2>
-          <div class="mb-3 row">
-            <label for="AadharCard" class="col-sm-2 col-form-label">
+          <div className="mb-3 row">
+            <label for="AadharCard" className="col-sm-2 col-form-label">
               Aadhar Card
             </label>
-            <div class="col-sm-10">
+            <div className="col-sm-10">
               <input
-                class="form-control"
+                className="form-control"
                 type="file"
                 id="AadharCard"
                 onChange={aadharUpload}
               ></input>
-              <label for="pdfFiles" class="form-label" style={{ color: "red" }}>
+              <label
+                for="pdfFiles"
+                className="form-label"
+                style={{ color: "red" }}
+              >
                 * only pdf files allowed.
               </label>
             </div>
           </div>
-          <div class="mb-3 row">
-            <label for="PanCard" class="col-sm-2 col-form-label">
+          <div className="mb-3 row">
+            <label for="PanCard" className="col-sm-2 col-form-label">
               Pan Card
             </label>
-            <div class="col-sm-10">
+            <div className="col-sm-10">
               <input
-                class="form-control"
+                className="form-control"
                 type="file"
                 id="PanCard"
                 onChange={panUpload}
               ></input>
-              <label for="pdfFiles" class="form-label" style={{ color: "red" }}>
+              <label
+                for="pdfFiles"
+                className="form-label"
+                style={{ color: "red" }}
+              >
                 * only pdf files allowed.
               </label>
             </div>
           </div>
-          <div class="mb-3 row">
-            <label for="Passport" class="col-sm-2 col-form-label">
+          <div className="mb-3 row">
+            <label for="Passport" className="col-sm-2 col-form-label">
               Passport
             </label>
-            <div class="col-sm-10">
+            <div className="col-sm-10">
               <input
-                class="form-control"
+                className="form-control"
                 type="file"
                 id="Passport"
                 onChange={passportUpload}
               ></input>
-              <label for="pdfFiles" class="form-label" style={{ color: "red" }}>
+              <label
+                for="pdfFiles"
+                className="form-label"
+                style={{ color: "red" }}
+              >
                 * only pdf files allowed.
               </label>
             </div>
           </div>
-          <div class="mb-3 row">
-            <label for="DrivingLicense" class="col-sm-2 col-form-label">
+          <div className="mb-3 row">
+            <label for="DrivingLicense" className="col-sm-2 col-form-label">
               Driving License (Optional)
             </label>
-            <div class="col-sm-10">
+            <div className="col-sm-10">
               <input
-                class="form-control"
+                className="form-control"
                 type="file"
                 id="DrivingLicense"
                 onChange={licenseUpload}
               ></input>
-              <label for="pdfFiles" class="form-label" style={{ color: "red" }}>
+              <label
+                for="pdfFiles"
+                className="form-label"
+                style={{ color: "red" }}
+              >
                 * only pdf files allowed.
               </label>
             </div>

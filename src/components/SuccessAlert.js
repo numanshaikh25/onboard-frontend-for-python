@@ -4,7 +4,7 @@ function SuccessAlert({ message }) {
   return (
     <div>
       <div
-        class="alert alert-success d-flex align-items-center alert-dismissible fade show"
+        className="alert alert-success d-flex align-items-center alert-dismissible fade show"
         role="alert"
       >
         <svg
@@ -20,7 +20,7 @@ function SuccessAlert({ message }) {
         </svg>
         <button
           type="button"
-          class="btn-close"
+          className="btn-close"
           data-bs-dismiss="alert"
           aria-label="Close"
         ></button>

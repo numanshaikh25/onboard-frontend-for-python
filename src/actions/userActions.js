@@ -22,7 +22,7 @@ export const login = (email, password) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      "http://127.0.0.1:8000/api/employee/login/",
+      "https://onboard-backend-crinitis.herokuapp.com/api/employee/login/",
       { email: email, password: password },
       config
     );
@@ -62,7 +62,7 @@ export const register = (name, email, password) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      "http://127.0.0.1:8000/api/employee/register/",
+      "https://onboard-backend-crinitis.herokuapp.com/api/employee/register/",
       { name: name, email: email, password: password },
       config
     );

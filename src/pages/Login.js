@@ -33,26 +33,26 @@ function Login() {
         {loading && <Loading />}
         {error && <ErrorAlert message={error} />}
         <form onSubmit={submitHandler}>
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">
+          <div className="mb-3">
+            <label for="exampleFormControlInput1" className="form-label">
               Email address
             </label>
             <input
               type="email"
-              class="form-control"
+              className="form-control"
               id="exampleFormControlInput1"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
-          <div class="mb-3">
-            <label for="inputPassword" class="form-label">
+          <div className="mb-3">
+            <label for="inputPassword" className="form-label">
               Password
             </label>
             <input
               type="password"
-              class="form-control"
+              className="form-control"
               id="inputPassword"
               value={password}
               onChange={(e) => setPassword(e.target.value)}

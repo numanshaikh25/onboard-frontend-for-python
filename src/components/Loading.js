@@ -4,7 +4,7 @@ function Loading() {
   return (
     <div>
       <div
-        class="spinner-border mx-auto"
+        className="spinner-border mx-auto"
         style={{
           height: "50px",
           width: "50px",
@@ -13,7 +13,7 @@ function Loading() {
         }}
         role="status"
       >
-        <span class="visually-hidden">Loading...</span>
+        <span className="visually-hidden">Loading...</span>
       </div>
     </div>
   );

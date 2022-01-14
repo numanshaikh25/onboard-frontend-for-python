@@ -21,7 +21,7 @@ function Home() {
         },
       };
       const { data } = await axios.get(
-        `http://127.0.0.1:8000/api/employee/getnotifications/`,
+        `https://onboard-backend-crinitis.herokuapp.com/api/employee/getnotifications/`,
         config
       );
       console.log(data);
@@ -40,14 +40,14 @@ function Home() {
     <div className="container">
       {userInfo && userInfo.isAdmin && notifications != "" && (
         <div
-          class="alert alert-primary my-3 alert-dismissible fade show"
+          className="alert alert-primary my-3 alert-dismissible fade show"
           role="alert"
         >
           You have {notifications.length} notification(s){" "}
           <Link to="/notifications">check it out!</Link>
           <button
             type="button"
-            class="btn-close"
+            className="btn-close"
             data-bs-dismiss="alert"
             aria-label="Close"
           ></button>

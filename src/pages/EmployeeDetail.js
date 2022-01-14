@@ -26,7 +26,7 @@ function EmployeeDetail({ match, location, history }) {
     };
     async function fetchEmployee() {
       const { data } = await axios.get(
-        `http://127.0.0.1:8000/api/employee/getemployee/${id}`,
+        `https://onboard-backend-crinitis.herokuapp.com/api/employee/getemployee/${id}`,
         config
       );
       console.log(data);
@@ -51,97 +51,97 @@ function EmployeeDetail({ match, location, history }) {
         <h2 className="my-4" style={{ borderBottom: "2px solid black" }}>
           Personal Details
         </h2>
-        <div class="mb-3 row">
-          <label for="firstName" class="col-sm-2 col-form-label">
+        <div className="mb-3 row">
+          <label for="firstName" className="col-sm-2 col-form-label">
             First Name
           </label>
-          <div class="col-sm-10">
+          <div className="col-sm-10">
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               id="firstName"
               value={employee.first_name}
               readOnly
             />
           </div>
         </div>
-        <div class="mb-3 row">
-          <label for="lastName" class="col-sm-2 col-form-label">
+        <div className="mb-3 row">
+          <label for="lastName" className="col-sm-2 col-form-label">
             Last Name
           </label>
-          <div class="col-sm-10">
+          <div className="col-sm-10">
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               id="lastName"
               value={employee.last_name}
               readOnly
             />
           </div>
         </div>
-        <div class="mb-3 row">
-          <label for="Email" class="col-sm-2 col-form-label">
+        <div className="mb-3 row">
+          <label for="Email" className="col-sm-2 col-form-label">
             Email
           </label>
-          <div class="col-sm-10">
+          <div className="col-sm-10">
             <input
               type="email"
-              class="form-control"
+              className="form-control"
               id="inputEmail"
               value={employee.email}
               readOnly
             />
           </div>
         </div>
-        <div class="mb-3 row">
-          <label for="gender" class="col-sm-2 col-form-label">
+        <div className="mb-3 row">
+          <label for="gender" className="col-sm-2 col-form-label">
             Gender
           </label>
-          <div class="col-sm-10">
+          <div className="col-sm-10">
             <input
               type="email"
-              class="form-control"
+              className="form-control"
               id="inputEmail"
               value={employee.gender}
               readOnly
             />
           </div>
         </div>
-        <div class="mb-3 row">
-          <label for="Age" class="col-sm-2 col-form-label">
+        <div className="mb-3 row">
+          <label for="Age" className="col-sm-2 col-form-label">
             Age
           </label>
-          <div class="col-sm-10">
+          <div className="col-sm-10">
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               id="Age"
               value={employee.age}
               readOnly
             />
           </div>
         </div>
-        <div class="mb-3 row">
-          <label for="MobileNumber" class="col-sm-2 col-form-label">
+        <div className="mb-3 row">
+          <label for="MobileNumber" className="col-sm-2 col-form-label">
             Mobile Number
           </label>
-          <div class="col-sm-10">
+          <div className="col-sm-10">
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               id="MobileNumber"
               value={employee.mobile_number}
               readOnly
             />
           </div>
         </div>
-        <div class="mb-3 row">
-          <label for="Address" class="col-sm-2 col-form-label">
+        <div className="mb-3 row">
+          <label for="Address" className="col-sm-2 col-form-label">
             Address
           </label>
-          <div class="col-sm-10">
+          <div className="col-sm-10">
             <textarea
-              class="form-control"
+              className="form-control"
               id="Address"
               value={employee.address}
               readOnly
@@ -151,14 +151,14 @@ function EmployeeDetail({ match, location, history }) {
         <h2 className="my-4" style={{ borderBottom: "2px solid black" }}>
           Role of Employee
         </h2>
-        <div class="mb-3 row">
-          <label for="Role" class="col-sm-2 col-form-label">
+        <div className="mb-3 row">
+          <label for="Role" className="col-sm-2 col-form-label">
             Role
           </label>
-          <div class="col-sm-10">
+          <div className="col-sm-10">
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               id="Role"
               value={employee.role}
               readOnly
@@ -168,56 +168,56 @@ function EmployeeDetail({ match, location, history }) {
         <h2 className="my-4" style={{ borderBottom: "2px solid black" }}>
           Bank Details
         </h2>
-        <div class="mb-3 row">
-          <label for="BankName" class="col-sm-2 col-form-label">
+        <div className="mb-3 row">
+          <label for="BankName" className="col-sm-2 col-form-label">
             Bank Name
           </label>
-          <div class="col-sm-10">
+          <div className="col-sm-10">
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               id="BankName"
               value={employee.bank_name}
               readOnly
             />
           </div>
         </div>
-        <div class="mb-3 row">
-          <label for="AccountNumber" class="col-sm-2 col-form-label">
+        <div className="mb-3 row">
+          <label for="AccountNumber" className="col-sm-2 col-form-label">
             Account Number
           </label>
-          <div class="col-sm-10">
+          <div className="col-sm-10">
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               id="AccountNumber"
               value={employee.account_no}
               readOnly
             />
           </div>
         </div>
-        <div class="mb-3 row">
-          <label for="IfscCode" class="col-sm-2 col-form-label">
+        <div className="mb-3 row">
+          <label for="IfscCode" className="col-sm-2 col-form-label">
             Ifsc Code
           </label>
-          <div class="col-sm-10">
+          <div className="col-sm-10">
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               id="IfscCode"
               value={employee.ifsc_code}
               readOnly
             />
           </div>
         </div>
-        <div class="mb-3 row">
-          <label for="BranchName" class="col-sm-2 col-form-label">
+        <div className="mb-3 row">
+          <label for="BranchName" className="col-sm-2 col-form-label">
             Branch Name
           </label>
-          <div class="col-sm-10">
+          <div className="col-sm-10">
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               id="BranchName"
               value={employee.bank_branch_location}
               readOnly

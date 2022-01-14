@@ -27,7 +27,7 @@ function EmployeeTable() {
 
     async function fetchEmployees() {
       const { data } = await axios.get(
-        "http://127.0.0.1:8000/api/employee/getemployees/",
+        "https://onboard-backend-crinitis.herokuapp.com/api/employee/getemployees/",
         config
       );
       console.log(data);
@@ -47,7 +47,7 @@ function EmployeeTable() {
     if (window.confirm("Are you sure you want to delete this emloyee?")) {
       axios
         .delete(
-          `http://127.0.0.1:8000/api/employee/deleteemployee/${id}/`,
+          `https://onboard-backend-crinitis.herokuapp.com/api/employee/deleteemployee/${id}/`,
           config
         )
         .then((res) => {
@@ -73,7 +73,7 @@ function EmployeeTable() {
       </button>
       <div className="text-center mx-auto">{loading && <Loading />}</div>
       {success && <SuccessAlert message={success} />}
-      <table class="table">
+      <table className="table">
         <thead>
           <tr>
             <th scope="col">Id</th>

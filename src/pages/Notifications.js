@@ -19,7 +19,7 @@ function Notifications() {
     };
     async function fetchNotifications() {
       const { data } = await axios.get(
-        `http://127.0.0.1:8000/api/employee/getnotifications/`,
+        `https://onboard-backend-crinitis.herokuapp.com/api/employee/getnotifications/`,
         config
       );
       console.log(data);
@@ -39,7 +39,7 @@ function Notifications() {
     setLoading(true);
     async function readNotifications() {
       const { data } = await axios.get(
-        `http://127.0.0.1:8000/api/employee/readnotifications/${id}/`,
+        `https://onboard-backend-crinitis.herokuapp.com/api/employee/readnotifications/${id}/`,
         config
       );
       console.log(data);
@@ -56,7 +56,7 @@ function Notifications() {
       <div className="text-center mx-auto">{loading && <Loading />}</div>
 
       {notifications != "" ? (
-        <table class="table">
+        <table className="table">
           <thead>
             <tr>
               <th scope="col-9">Notifications</th>

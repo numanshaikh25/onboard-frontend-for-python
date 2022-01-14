@@ -33,7 +33,11 @@ function Invite() {
     };
 
     axios
-      .post("http://127.0.0.1:8000/api/employee/invite/", formData, config)
+      .post(
+        "https://onboard-backend-crinitis.herokuapp.com/api/employee/invite/",
+        formData,
+        config
+      )
       .then((res) => {
         // history.push("/allemployees");
         setLoading(false);
@@ -70,14 +74,14 @@ function Invite() {
 
         {success && <SuccessAlert message={success} />}
         {errormessage && <ErrorAlert message={errormessage} />}
-        <div class="mb-3 row">
-          <label for="firstName" class="col-sm-2 col-form-label">
+        <div className="mb-3 row">
+          <label for="firstName" className="col-sm-2 col-form-label">
             Enter Email
           </label>
-          <div class="col-sm-8">
+          <div className="col-sm-8">
             <input
               type="email"
-              class="form-control"
+              className="form-control"
               id="inputEmail"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
